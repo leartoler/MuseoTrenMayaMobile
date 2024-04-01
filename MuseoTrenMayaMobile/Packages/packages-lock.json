@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.needle.auto-installer": {
+      "version": "file:installer.com.atteneder.draco",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.adaptiveperformance": {
       "version": "4.0.1",
       "depth": 1,
