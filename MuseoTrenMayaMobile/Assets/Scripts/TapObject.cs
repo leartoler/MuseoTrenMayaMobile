@@ -10,6 +10,8 @@ namespace MisaVondoExamineSystem
 
         public void ExamineA()
         {
+            
+            Debug.Log("ExamineA");
             canvasPlayer.SetActive(false);
             canvasExamineA.SetActive(true);
             canvasExamineB.SetActive(false);
@@ -17,6 +19,7 @@ namespace MisaVondoExamineSystem
 
         public void ExamineB()
         {
+            Debug.Log("ExamineB");
             canvasPlayer.SetActive(false);
             canvasExamineA.SetActive(false);
             canvasExamineB.SetActive(true);
