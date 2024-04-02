@@ -12,25 +12,29 @@ namespace MisaVondoExamineSystem
         {
             isReach = false;
             buttonExamine.SetActive(false);
+            Debug.Log ("No hay naaa");
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)  
         {
             if (other.gameObject.tag == "Reach")
             {
+
                 isReach = true;
                 buttonExamine.SetActive(true);
+                Debug.Log ("Objeto identificado");
             }
-        }
+}
+        
+        
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.tag == "Reach")
-            {
+            
                 isReach = false;
                 buttonExamine.SetActive(false);
+                Debug.Log("No hay objeto");
             }
         }
     }
-}
 
