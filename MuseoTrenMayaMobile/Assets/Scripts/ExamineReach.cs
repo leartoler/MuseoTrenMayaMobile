@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ExamineReach : MonoBehaviour
 {
-    public GameObject buttonExamine;
+    public GameObject buttonExamineA;
+    public GameObject buttonExamineB;
     public bool isReach;
 
     private void Start()
     {
         isReach = false;
-        buttonExamine.SetActive(false);
+        buttonExamineA.SetActive(false);
+        buttonExamineB.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,7 +23,8 @@ public class ExamineReach : MonoBehaviour
         {
             Debug.Log ("objeto 1");
             isReach = true;
-            buttonExamine.SetActive(true);
+            buttonExamineA.SetActive(true);
+            buttonExamineB.SetActive(false);
         }    
         
         if (other.gameObject.tag == "Objeto_2")
@@ -29,7 +32,8 @@ public class ExamineReach : MonoBehaviour
         {
             Debug.Log ("Objeto 2");
             isReach = true;
-            buttonExamine.SetActive(true);
+            buttonExamineB.SetActive(true);
+            buttonExamineA.SetActive(false);
         }
     }
 
@@ -38,12 +42,14 @@ public class ExamineReach : MonoBehaviour
         if (other.gameObject.tag == "Objeto_1")
         {
             isReach = false;
-            buttonExamine.SetActive(false);
+            buttonExamineA.SetActive(false);
+            buttonExamineB.SetActive(false);
         }
         if (other.gameObject.tag == "Objeto_2")
         {
             isReach = false;
-            buttonExamine.SetActive(false);
+            buttonExamineA.SetActive(false);
+            buttonExamineB.SetActive(false);
     }
 }
 }

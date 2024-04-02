@@ -5,18 +5,28 @@ namespace MisaVondoExamineSystem
     public class TapObject : MonoBehaviour
     {
         public GameObject canvasPlayer;
-        public GameObject canvasExamine;
+        public GameObject canvasExamineA;
+        public GameObject canvasExamineB;
 
-        public void Examine()
+        public void ExamineA()
         {
             canvasPlayer.SetActive(false);
-            canvasExamine.SetActive(true);
+            canvasExamineA.SetActive(true);
+            canvasExamineB.SetActive(false);
+        }
+
+        public void ExamineB()
+        {
+            canvasPlayer.SetActive(false);
+            canvasExamineA.SetActive(false);
+            canvasExamineB.SetActive(true);
         }
 
         public void ExitExamine()
         {
             canvasPlayer.SetActive(true);
-            canvasExamine.SetActive(false);
+            canvasExamineA.SetActive(false);
+            canvasExamineB.SetActive(false);
         }
     }
 }

@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Reach
-  - Reach_B
+  - Objeto_1
+  - Objeto_2
+  - Reach_1
+  - Reach_2
   layers:
   - Default
   - TransparentFX

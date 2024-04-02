@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MisaVondoExamineSystem
 {
-    public class ExamineObject : MonoBehaviour
+    public class ExamineObject_B : MonoBehaviour
     {
         public GameObject buttonExamine;
 
@@ -16,9 +16,8 @@ namespace MisaVondoExamineSystem
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "Reach_1")
+            if (other.gameObject.tag == "Reach_2")
             {
-                Debug.Log("objeto a se ve");
                 isReach = true;
                 buttonExamine.SetActive(true);
             }
@@ -27,7 +26,7 @@ namespace MisaVondoExamineSystem
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.tag == "Reach_1")
+            if (other.gameObject.tag == "Reach_2")
             {
                 isReach = false;
                 buttonExamine.SetActive(false);
